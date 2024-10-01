@@ -6,6 +6,7 @@ const port = process.env.PORT || process.env.NODE_PORT || 3000;
 const app = express();
 
 app.use(express.static('client'));
+app.use(express.json());
 const indexRouter = require('./routes/index.js');
 const quotesRouter = require('./routes/quotes.js');
 const apiRouter = require('./routes/api.js');
