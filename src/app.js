@@ -2,7 +2,7 @@ const express = require('express');
 const path = require('path');
 
 const filePath404Page = path.resolve(__dirname, '../client/404.html');
-const port = 3000;
+const port = process.env.PORT || process.env.NODE_PORT || 3000;
 const app = express();
 
 app.use(express.static('client'));
